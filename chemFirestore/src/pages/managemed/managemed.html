@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Manage Chemist 1 Meds</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <h2>Image:</h2>
+      {{item.MedicineImage}} 
+      <br>
+      {{item.MedicineName}}
+      <h2>Type:</h2>
+      {{item.MedicineCategory}} <br>
+      <button ion-button (click)="update()">Update</button>
+      <button ion-button color= "danger" outline (click)="delete(key)">Delete</button>
+    </ion-item>
+    
+  </ion-list>
+ 
+</ion-content>

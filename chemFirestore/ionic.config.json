@@ -1,0 +1,7 @@
+{
+  "name": "chemFirestore",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

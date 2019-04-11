@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add a Chemist</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label floating>Chemist Name</ion-label>
+        <ion-input type="text"  [(ngModel)]="ChemistName"></ion-input>  
+     </ion-item>
+    
+     <ion-item>
+       <ion-label floating>Chemist Location</ion-label>
+       <ion-input type="text"  [(ngModel)]="ChemistLocation"></ion-input>
+     </ion-item>
+
+     <ion-item>
+        <ion-label floating>Chemist Business Number</ion-label>
+        <ion-input type="number"   [(ngModel)]="ChemistBusinessNumber"></ion-input>  
+     </ion-item>
+
+     <ion-item>
+      <!-- <ion-label>Account: </ion-label> -->
+      <ion-select [(ngModel)] ="ChemistAccountType" placeholder="Account Type">
+        <ion-option>M-Pesa</ion-option>
+        <ion-option>Bank Account</ion-option>
+      </ion-select>
+    </ion-item>
+ 
+     <ion-item>
+        <ion-label floating>Accnt No. /PayBill </ion-label>
+        <ion-input type="number"  [(ngModel)]="ChemistAccountNumber"></ion-input>  
+     </ion-item>
+
+     <ion-item>
+      <ion-label floating>Chemist Description</ion-label>
+       <ion-textarea [(ngModel)]="ChemistDescription"></ion-textarea>
+     </ion-item>
+
+    <button ion-button block round (click)="addChem(ChemistName,ChemistLocation,ChemistBusinessNumber,ChemistAccountType,ChemistAccountNumber,ChemistDescription)">Add Chemist</button>
+    <button ion-button block round (click)="addMed()"> Add Chemist</button>
+</ion-content>

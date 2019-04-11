@@ -1,0 +1,48 @@
+<ion-menu [content]="content" id="menu-material">
+    <ion-content>
+        <div class="menu-header">
+            <!--material-design-background-->
+            <!-- <img class="user-avatar round" onerror="this.src='assets/imgs/logo-mailchimp.png'" /> -->
+            <img class="user-avatar round" src='assets/imgs/lady.png' />
+            <p class="name">Peris</p>
+            <p class="e-mail">peris@gmail.com</p>
+        </div>
+
+
+        <ion-list no-lines>
+         <button menuClose="left" ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon [name]="p.icon" item-left></ion-icon>
+          {{p.title}}
+         </button>
+        </ion-list>
+
+    </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+
+ <!-- ====== MINE ========= -->
+<!-- <ion-menu [content] = "content">
+    <ion-content >
+
+        <ion-item>
+         <ion-img style="width: 200px; height: 100px;" src="imgs/splash.png"></ion-img>
+         
+        </ion-item>
+        
+        <ion-item >
+            <ion-icon name="home" item-start></ion-icon>
+                @perisq
+        </ion-item>
+        
+        <ion-item>
+            <ion-icon name="accounts" item-start></ion-icon>
+        </ion-item>
+
+
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav> -->
